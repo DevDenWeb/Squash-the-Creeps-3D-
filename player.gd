@@ -17,7 +17,7 @@ func _physics_process(delta):
 		direction.x -= 1
 	if Input.is_action_pressed("move_back"):
 		direction.z += 1
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("move_forward"):
 		direction.z -= 1
 
 	if direction != Vector3.ZERO:
