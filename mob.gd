@@ -19,3 +19,7 @@ func initialize(start_position, player_position):
 	velocity = Vector3.FORWARD * random_speed
 	# Вращаем вектор скорости на основе вращения моба по оси Y для того, чтобы двигаться в направлении, куда смотрит моб
 	velocity = velocity.rotated(Vector3.UP, rotation.y)
+
+
+func _on_visible_on_screen_notifier_3d_screen_exited():
+	queue_free()

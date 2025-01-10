@@ -1,11 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736513541
+::res://::1736543693
 default_bus_layout.tres::AudioBusLayout::-1::1735307060::0::1::::<><>::
 default_env.tres::Environment::6595884410388949949::1735310358::0::1::::<><>::
 icon.png::CompressedTexture2D::4049256502425976811::1735306647::1735307137::1::::<><>::
-main.tscn::PackedScene::7587546091932741909::1736450540::0::1::::<><>::uid://c6tn481duc4r::::res://player.tscn
-player.gd::GDScript::-1::1736450107::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::205551811177063619::1736450540::0::1::::<><>::uid://d0se4tgpxe4ku::::res://art/player.glb<>res://player.gd
+main.tscn::PackedScene::7587546091932741909::1736518884::0::1::::<><>::uid://c6tn481duc4r::::res://player.tscn
+mob.gd::GDScript::-1::1736521235::0::1::::<>CharacterBody3D<>::
+mob.tscn::PackedScene::5860072896884132172::1736521235::0::1::::<><>::res://mob.gd<>uid://bgulmekx7gotl::::res://art/mob.glb
+player.gd::GDScript::-1::1736518904::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::205551811177063619::1736518903::0::1::::<><>::uid://d0se4tgpxe4ku::::res://art/player.glb<>res://player.gd
 ::res://addons/::1735310434
 ::res://addons/godot-git-plugin/::1735310434
 git_plugin.gdextension::GDExtension::-1::1735310434::0::1::::<><>::
@@ -13,7 +15,7 @@ plugin.cfg::TextFile::-1::1735310434::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1735310434::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1735310434
 ::res://addons/godot-git-plugin/macos/::1735310434
-::res://addons/godot-git-plugin/win64/::1736513521
+::res://addons/godot-git-plugin/win64/::1736543673
 ::res://art/::1735307138
 body.material::StandardMaterial3D::-1::1735306647::0::1::::<><>::
 eye.material::StandardMaterial3D::-1::1735306647::0::1::::<><>::
