@@ -32,7 +32,7 @@ func _physics_process(delta):
 	# Вертиканая скорость
 	if not is_on_floor(): # Если в воздухе, падай к полу. Буквально гравитация
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
-
+		
 	# Перемещение персонажа
 	velocity = target_velocity
 	move_and_slide()
