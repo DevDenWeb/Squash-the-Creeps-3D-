@@ -18,3 +18,7 @@ func _on_mob_timer_timeout():
 	
 	# Создаёт моба, добавив его на главную сцену
 	add_child(mob)
+
+
+func _on_player_hit():
+	$MobTimer.stop()

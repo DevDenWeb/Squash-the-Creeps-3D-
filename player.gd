@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+# Сигнализирует, когда игрок получает удар от моба
+signal hit
+
 # Скорость движения игрока в метрах в секунду.
 @export var speed = 14
 # Ускорение падения в воздухе, в метрах в секунду в квадрате.
@@ -27,7 +30,7 @@ func _physics_process(delta):
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
 		# Установка базового свойства повлияет на поворот узла.
-		$Pivot.basis = Basis.looking_at(direction)
+		$Pivot.look_at(position + direction, Vector3.UP)
 	
 	# Скорость относительно земли
 	target_velocity.x = direction.x * speed
@@ -36,9 +39,6 @@ func _physics_process(delta):
 	# Вертиканая скорость
 	if not is_on_floor(): # Если в воздухе, падай к полу. Буквально гравитация
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
-	
-	# Перемещение персонажа
-	velocity = target_velocity
 	
 	# Прыжки
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
@@ -63,5 +63,13 @@ func _physics_process(delta):
 				# Предотвращает дальнейшие дублирующие вызовы
 				break
 	
-	
+	# Перемещение персонажа
+	velocity = target_velocity
 	move_and_slide()
+
+func die():
+	hit.emit()
+	queue_free()
+
+func _on_mob_detector_body_entered(_body):
+	die()
